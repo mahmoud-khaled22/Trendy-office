@@ -1,0 +1,94 @@
+/* ===================== */
+/* Shadow Base (Desktop) */
+/* ===================== */
+.center-shadow {
+    position: absolute;
+    bottom: 9.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    height: 22px;
+    background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
+    filter: blur(10px);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.left-shadow {
+    position: absolute;
+    bottom: 9.5%;
+    left: -2%;
+    width: 48%;
+    height: 18px;
+    background: radial-gradient(ellipse 100% 100% at 38% 100%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.22) 20%, transparent 30%);
+    filter: blur(7px);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.right-shadow {
+    position: absolute;
+    bottom: 9.5%;
+    right: -2%;
+    width: 48%;
+    height: 18px;
+    background: radial-gradient(ellipse 100% 100% at 62% 100%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.22) 20%, transparent 30%);
+    filter: blur(7px);
+    z-index: 5;
+    pointer-events: none;
+}
+/* @media (max-width: 1000px) and (min-width: 768px) {
+  .hero {
+   object-position: 100% 90%; !important   
+  }
+} */
+
+/* ============================= */
+/* Tablet  (max-width: 1024px)   */
+/* md breakpoint  ≤ 1024px       */
+/* ============================= */
+/* @media (max-width: 1024px) {
+    .center-shadow {
+        height: 16px;
+        filter: blur(8px);
+    }
+
+    .left-shadow,
+    .right-shadow {
+        height: 13px;
+        filter: blur(5px);
+    }
+} */
+
+/* ============================== */
+/* Small tablet (max-width: 768px)*/
+/* sm breakpoint  ≤ 768px         */
+/* ============================== */
+/* @media (max-width: 768px) {
+    .center-shadow {
+        height: 12px;
+        filter: blur(6px);
+    }
+
+    .left-shadow,
+    .right-shadow {
+        height: 10px;
+        filter: blur(4px);
+    }
+} */
+
+/* ============================= */
+/* Mobile  (max-width: 480px)    */
+/* ============================= */
+/* @media (max-width: 480px) {
+    .center-shadow {
+        height: 8px;
+        filter: blur(4px);
+    }
+
+    .left-shadow,
+    .right-shadow {
+        height: 7px;
+        filter: blur(3px);
+    }
+} */

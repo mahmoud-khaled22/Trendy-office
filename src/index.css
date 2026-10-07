@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-red: #d1493f;
+  --color-brand-gray: #f8f9fa;
+  --color-border-primary: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-border-primary-hover: oklch(52.2% 0.068 264.331 / 0.25);
+  --color-accent-foreground: oklch(1 0 0);
+  --color-muted-foreground: oklch(59.8% 0.014 259.934);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(15.2% 0.012 262.406);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(15.2% 0.012 262.406);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(15.2% 0.012 262.406);
+  --color-primary: oklch(57.2% 0.167 31.457);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(96.1% 0.009 261.478);
+  --color-secondary-foreground: oklch(15.2% 0.012 262.406);
+  --color-muted: oklch(96.1% 0.009 261.478);
+  --color-muted-foreground: oklch(59.8% 0.014 259.934);
+  --color-accent: oklch(96.1% 0.009 261.478);
+  --color-accent-foreground: oklch(15.2% 0.012 262.406);
+  --color-destructive: oklch(60.3% 0.198 27.309);
+  --color-destructive-foreground: oklch(1 0 0);
+  --color-border: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-input: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-ring: oklch(57.2% 0.167 31.457);
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --color-sidebar: oklch(98.6% 0.004 261.26);
+  --color-sidebar-foreground: oklch(15.2% 0.012 262.406);
+  --color-sidebar-primary: oklch(57.2% 0.167 31.457);
+  --color-sidebar-primary-foreground: oklch(1 0 0);
+  --color-sidebar-accent: oklch(96.1% 0.009 261.478);
+  --color-sidebar-accent-foreground: oklch(15.2% 0.012 262.406);
+  --color-sidebar-border: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-sidebar-ring: oklch(57.2% 0.167 31.457);
+  --color-chart-1: oklch(57.2% 0.167 31.457);
+  --color-chart-2: oklch(60.3% 0.198 27.309);
+  --color-chart-3: oklch(81.1% 0.164 147.39);
+  --color-chart-4: oklch(60% 0.166 263.409);
+  --color-chart-5: oklch(79.1% 0.177 86.838);
+  --color-background-secondary: oklch(98.6% 0.004 261.26);
+  --color-foreground-secondary: oklch(59.8% 0.014 259.934);
+  --color-popover-secondary: oklch(1 0 0);
+  --color-popover-foreground-secondary: oklch(15.2% 0.012 262.406);
+  --color-card-secondary: oklch(1 0 0);
+  --color-card-foreground-secondary: oklch(15.2% 0.012 262.406);
+  --color-input-secondary: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-accent-secondary: oklch(92.9% 0.017 258.78);
+  --color-accent-foreground-secondary: oklch(59.8% 0.014 259.934);
+  --color-destructive-secondary: oklch(60.3% 0.198 27.309);
+  --color-destructive-foreground-secondary: oklch(1 0 0);
+  --color-ring-secondary: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-table-thead-background: oklch(98.6% 0.004 261.26);
+  --color-table-thead-foreground: oklch(59.8% 0.014 259.934);
+  --color-table-tbody-background: oklch(1 0 0);
+  --color-table-tbody-foreground: oklch(59.8% 0.014 259.934);
+  --color-table-border: oklch(82.5% 0.019 264.634 / 0.25);
+  --color-table-accent-background: oklch(92.9% 0.017 258.78);
+  --color-table-accent-foreground: oklch(59.8% 0.014 259.934);
+  --color-chart-1-foreground: oklch(1 0 0);
+  --color-chart-2-foreground: oklch(1 0 0);
+  --color-chart-3-foreground: oklch(1 0 0);
+  --color-chart-4-foreground: oklch(1 0 0);
+  --color-chart-5-foreground: oklch(1 0 0);
+}
+/* ... existing styles ... */
+
+/* --- هذا الجزء مهم جداً للـ blending --- */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen; /* أو multiply حسب التأثير المطلوب */
+}
+
+.floor-layer {
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
